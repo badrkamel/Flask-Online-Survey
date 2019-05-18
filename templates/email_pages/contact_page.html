@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+
+	<h1>Contact form</h1>
+	<form method="post">
+		{{ form.full_name }}
+		<br>
+		{% for subfield in form.choices %}
+			<tr>
+			    <td>{{ subfield }}</td>
+			    <td>{{ subfield.label }}</td>
+			</tr>
+			{% endfor %}
+		<br>
+		{{ form.submit }}
+		<br>
+	</form>
+{% endblock content %}
